@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Daily Journal</title>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/css/styles.css">
+
+  <body>
+    <div class="container">
+      <div class="jumbotron">
+        <h1 class="display-3">Oops The post doesn't Exist</h1>
+        <p class="lead">Reason for this may be because there might already be a post on the topic that you are trying to publish or the post doesn't exist</p>
+        <p class="lead">Sorry for the inconvenience...try our other posts...you will be redirected in <span id="time">15</span> secs</p>
+      </div>
+
+    </div>
+    <script type="text/javascript">
+      let totalSecs = parseInt(document.getElementById("time").textContent);
+      let tempSecs = totalSecs;
+      let endingTime = setInterval(( ) => {
+        totalSecs--;
+        document.getElementById("time").textContent = totalSecs;
+        if(totalSecs <= 0) {
+          window.location.href="/";
+          // clearInterval(endingTime);
+        }
+
+      }, 1000);
+
+
+    </script>
+  </body>
+</html>
