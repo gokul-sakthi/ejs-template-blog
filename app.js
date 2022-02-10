@@ -20,7 +20,7 @@ app.use(bodyParser.urlencoded({
 }));
 app.use(express.static("public"));
 
-mongoose.connect("mongodb+srv://admin-gokul:gokul123@cluster0-3ukjw.mongodb.net/blogDB", {useNewUrlParser:true, useUnifiedTopology:true, useFindAndModify:false});
+mongoose.connect("MONGODB_URL", {useNewUrlParser:true, useUnifiedTopology:true, useFindAndModify:false});
 
 const blogSchema = new mongoose.Schema({
   title:{
